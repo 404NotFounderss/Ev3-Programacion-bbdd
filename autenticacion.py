@@ -34,6 +34,10 @@ class Autenticacion:
         if len(contrasena) < 6 or contrasena.isalpha() or contrasena.isdigit():
             print("La contraseña debe tener al menos 6 caracteres y contener letras y números.")
             return
+        
+        if "@" not in email:
+            print("El email debe contener un @.")
+            return
 
         for u in self.usuarios:
             if u.email == email:
