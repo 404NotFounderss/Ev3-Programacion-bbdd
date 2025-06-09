@@ -1,34 +1,34 @@
-CREATE DATABASE IF NOT EXISTS planificador;
-USE planificador;
+CREATE DATABASE programacion_bbdd;  #Creacion de la base de datos
 
-CREATE TABLE IF NOT EXISTS roles (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(50) NOT NULL UNIQUE
+USE programacion_bbdd;
+
+#Seleccion de tablas
+SELECT * FROM usuarios;
+SELECT * FROM usuarios WHERE id_usuario = 1;
+
+#Creacion de tabla usuarios
+CREATE TABLE usuarios (
+  id_usuario INT PRIMARY KEY AUTO_INCREMENT,
+  nombre varchar(30) NOT NULL,
+  email varchar(30) NOT NULL UNIQUE,
+  contrasena varchar(15) NOT NULL,
+  rol varchar(7) NOT NULL CHECK (rol IN ('admin', 'usuario'))
 );
 
-CREATE TABLE IF NOT EXISTS usuarios (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre_usuario VARCHAR(50) NOT NULL UNIQUE,
-    contrasena VARCHAR(255) NOT NULL,
-    role_id INT NOT NULL,
-    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (role_id) REFERENCES roles(id)
-);
+#CRUD
+INSERT INTO usuarios (nombre, email, contrasena, rol)
+VALUES ('Admin', 'admin@admin.com', 'asd123', 'admin');
 
-INSERT IGNORE INTO roles (nombre) VALUES
-    ('administrador'),
-    ('usuario_estandar');
+INSERT INTO usuarios (nombre, email, contrasena, rol)
+VALUES ('Usuario', 'usuario@usuario.com', 'asd123', 'usuario');
 
-INSERT INTO usuarios (nombre_usuario, contrasena, role_id)
-VALUES ('usuario_prueba', 'prueba123', (SELECT id FROM roles WHERE nombre = 'usuario_estandar'));
+INSERT INTO usuarios (nombre, email, contrasena, rol)
+VALUES ('Usuario2', 'usuario2@usuario.com', 'asd123', 'usuario');
 
-SELECT u.id, u.nombre_usuario, r.nombre AS rol, u.fecha_creacion
-FROM usuarios u
-JOIN roles r ON u.role_id = r.id;
+UPDATE usuarios SET contrasena = 'qwe123'
+WHERE id_usuario = 2;
 
-UPDATE usuarios
-SET role_id = (SELECT id FROM roles WHERE nombre = 'administrador')
-WHERE nombre_usuario = 'usuario_prueba';
+UPDATE usuarios SET rol = 'admin'
+WHERE id_usuario = 2;
 
-DELETE FROM usuarios
-WHERE nombre_usuario = 'usuario_prueba';
+DELETE FROM usuarios WHERE id_usuario = 3;
