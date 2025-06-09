@@ -24,7 +24,7 @@ class Menu:
         gestor = GestorUsuarios(usuarios)
 
         while True:
-            print("\n--- MENÚ ADMIN ---")
+            print(f"\n--- MENÚ ADMIN: {usuario.nombre} ---")
             print("1. Listar usuarios")
             print("2. Eliminar usuario")
             print("3. Cambiar rol")

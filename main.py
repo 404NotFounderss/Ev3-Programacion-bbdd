@@ -6,7 +6,7 @@ def main():
     menu = Menu()
 
     while True:
-        print("\n=== SISTEMA DE USUARIOS ===")
+        print("\n--- USUARIOS ---")
         print("1. Registrarse")
         print("2. Iniciar sesión")
         print("0. Salir")
