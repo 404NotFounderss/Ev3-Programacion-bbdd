@@ -14,7 +14,3 @@ class Usuario:
         print("\n✅ Contraseña actualizada correctamente.")
 
 
-# usuario_nuevo = Usuario(1,"Joaco","joaco@gmail.com","111111","admin")
-# usuario_nuevo.ver_datos()
-# usuario_nuevo.cambiar_contrasena("1234567")
-# usuario_nuevo.ver_datos()
