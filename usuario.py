@@ -7,7 +7,7 @@ class Usuario:
         self.rol = rol
         
     def ver_datos(self):
-        print(f"\n🧾 Datos del usuario:\nNombre: {self.nombre}\nEmail: {self.email}\nRol: {self.rol}\npass: {self.contrasena}")
+        print(f"\n🧾 Datos del usuario:\nNombre: {self.nombre}\nEmail: {self.email}\nRol: {self.rol}")
 
     def cambiar_contrasena(self, nueva_contrasena):
         self.contrasena = nueva_contrasena
