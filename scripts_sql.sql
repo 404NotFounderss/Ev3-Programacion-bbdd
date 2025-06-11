@@ -1,21 +1,21 @@
-CREATE DATABASE programacion_bbdd;  #Creacion de la base de datos
+CREATE DATABASE programacion_bbdd;  --Creacion de la base de datos
 
 USE programacion_bbdd;
 
-#Seleccion de tablas
+--Seleccion de tablas
 SELECT * FROM usuarios;
 SELECT * FROM usuarios WHERE id_usuario = 1;
 
-#Creacion de tabla usuarios
+--Creacion de tabla usuarios
 CREATE TABLE usuarios (
   id_usuario INT PRIMARY KEY AUTO_INCREMENT,
   nombre varchar(30) NOT NULL,
   email varchar(30) NOT NULL UNIQUE,
-  contrasena varchar(15) NOT NULL,
+  contrasena varchar(100) NOT NULL,
   rol varchar(7) NOT NULL CHECK (rol IN ('admin', 'usuario'))
 );
 
-#CRUD
+--CRUD
 INSERT INTO usuarios (nombre, email, contrasena, rol)
 VALUES ('Admin', 'admin@admin.com', 'asd123', 'admin');
 
