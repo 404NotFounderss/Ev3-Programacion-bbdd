@@ -1,9 +1,9 @@
 ## 404NOTFOUNDERS INTEGRANTES 
 
-Joaquin Romero
-Luis Ramello
-Diego Farias
-Gabriel Natale
+- Joaquin Romero
+- Luis Ramello
+- Diego Farias
+- Gabriel Natale
 
 ## NOMBRE DEL PROYECTO
 
