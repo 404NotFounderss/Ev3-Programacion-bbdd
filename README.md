@@ -112,6 +112,7 @@ La tabla almacena:
 
 Script de creación:
 
+```
 CREATE DATABASE programacion_bbdd;
 
 USE programacion_bbdd;
@@ -123,5 +124,7 @@ CREATE TABLE usuarios (
   contrasena VARCHAR(15) NOT NULL,
   rol VARCHAR(7) NOT NULL CHECK (rol IN ('admin', 'usuario'))
 );
+
+```
 
 Incluye sentencias para crear, modificar y eliminar usuarios.
