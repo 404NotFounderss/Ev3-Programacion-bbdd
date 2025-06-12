@@ -81,6 +81,7 @@ Desde aquí puede:
 
 ## ESTRUCTURA DEL PROYECTO
 
+```
 .
 ├── main.py                # Punto de entrada principal
 ├── usuario.py             # Clase Usuario
@@ -90,6 +91,8 @@ Desde aquí puede:
 ├── scripts_sql.sql        # Script de creación y prueba de la base de datos
 ├── diagrama_clases.png    # Diagrama de clases UML
 └── README.md              # Documentación
+
+```
 
 
 ## BASE DE DATOS 
