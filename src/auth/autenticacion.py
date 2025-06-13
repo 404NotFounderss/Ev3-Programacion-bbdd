@@ -1,4 +1,4 @@
-from usuario import Usuario
+from src.users.usuario import Usuario
 
 class Autenticacion:
     def __init__(self):

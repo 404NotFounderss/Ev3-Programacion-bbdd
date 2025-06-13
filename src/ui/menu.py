@@ -1,4 +1,4 @@
-from gestor_usuarios import GestorUsuarios
+from src.users.gestor_usuarios import GestorUsuarios
 
 
 class Menu:
