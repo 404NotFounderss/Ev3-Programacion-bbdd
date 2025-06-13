@@ -1,5 +1,5 @@
-from autenticacion import Autenticacion
-from menu import Menu
+from src.auth.autenticacion import Autenticacion
+from src.ui.menu import Menu
 
 def main():
     sistema = Autenticacion()

@@ -1,4 +1,4 @@
-from gestor_usuarios import GestorUsuarios
+from src.users.gestor_usuarios import GestorUsuarios
 
 
 class Menu:
@@ -29,6 +29,8 @@ class Menu:
             print("1. Listar usuarios")
             print("2. Eliminar usuario")
             print("3. Cambiar rol")
+            print("4. Cambiar contraseña")
+            print("5. Ver mis datos")
             print("0. Salir")
 
             opcion = input("Elegí una opción: ")
@@ -46,6 +48,11 @@ class Menu:
                 id_usuario = int(input("ID del usuario: "))
                 nuevo_rol = input("Nuevo rol (admin/usuario): ")
                 gestor.cambiar_rol(id_usuario, nuevo_rol)
+            elif opcion == "4":
+                nueva = input("Nueva contraseña: ")
+                usuario.cambiar_contrasena(nueva)
+            elif opcion == "5":
+                usuario.ver_datos()      
             elif opcion == "0":
                 break
             else:

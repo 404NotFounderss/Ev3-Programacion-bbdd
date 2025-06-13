@@ -16,6 +16,9 @@ CREATE TABLE usuarios (
 );
 
 --CRUD
+SELECT * FROM usuarios;
+SELECT * FROM usuarios WHERE id_usuario = 1;
+
 INSERT INTO usuarios (nombre, email, contrasena, rol)
 VALUES ('Admin', 'admin@admin.com', 'asd123', 'admin');
 
