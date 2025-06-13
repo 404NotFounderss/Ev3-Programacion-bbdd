@@ -36,7 +36,7 @@ Si bien cada uno fue tomando pequeñas responsabilidades específicas en distint
 
 ## DIAGRAMA DE CLASES
 
-![Diagrama de Clases](diagrama_clases.png)
+![Diagrama de Clases](docs/diagrama_clases.png)
 
 ## FUNCIONAMIENTO EN GENERAL 
 
