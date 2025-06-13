@@ -1,5 +1,6 @@
 from gestor_usuarios import GestorUsuarios
 
+
 class Menu:
     def mostrar_menu_usuario(self, usuario):
         while True:
@@ -35,8 +36,12 @@ class Menu:
             if opcion == "1":
                 gestor.listar_usuarios()
             elif opcion == "2":
-                id_usuario = int(input("ID del usuario a eliminar: "))
-                gestor.eliminar_usuario(id_usuario)
+                entrada = input("ID del usuario a eliminar: ")
+                try:
+                    id_usuario = int(entrada)
+                    gestor.eliminar_usuario(id_usuario)
+                except ValueError:
+                    print("El ID debe ser un número entero.")
             elif opcion == "3":
                 id_usuario = int(input("ID del usuario: "))
                 nuevo_rol = input("Nuevo rol (admin/usuario): ")
