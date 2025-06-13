@@ -83,14 +83,21 @@ Desde aquí puede:
 
 ```
 .
-├── main.py                # Punto de entrada principal
-├── usuario.py             # Clase Usuario
-├── autenticacion.py       # Registro e inicio de sesión
-├── menu.py                # Menús según rol
-├── gestor_usuarios.py     # Funciones para admins
-├── scripts_sql.sql        # Script de creación y prueba de la base de datos
-├── diagrama_clases.png    # Diagrama de clases UML
-└── README.md              # Documentación
+├── docs/
+│   └── diagrama_clases.png
+├── src/
+│   ├── auth/
+│   │   └── autenticacion.py
+│   ├── database/
+│   │   └── create_db.sql
+│   │   └── crud_usuarios.sql
+│   ├── ui/
+│   │   └── menu.py
+│   ├── users/
+│   │   ├── usuario.py
+│   │   └── gestor_usuarios.py
+├── README.md
+└── main.py
 
 ```
 
